@@ -132,8 +132,13 @@ public class MainActivity extends Activity {
 
     private void SaveCode(String code, int count)
     {
-        if (count < 0) count = 0;
-        map.put(code, count);
+        if (count > 0) {
+            map.put(code, count);
+        }else {
+            if(map.containsKey(code)) {
+                map.remove(code);
+            }
+        }
 
         try {
             SaveToFile(GetFileName(), ConvertMapToString());
