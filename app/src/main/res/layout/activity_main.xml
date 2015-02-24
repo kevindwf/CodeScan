@@ -21,10 +21,37 @@
         android:textColor="@android:color/black"
         android:textSize="16sp" />
 
+
+    <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/result"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textSize="16sp" />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/subtract"
+            android:layout_alignBaseline="@+id/count"
+            android:layout_alignBottom="@+id/count"
+            android:layout_above="@+id/qrcode_bitmap"
+            android:visibility="invisible"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@+id/count"/>
+
+
     <ImageView
         android:id="@+id/qrcode_bitmap"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/result"/>
+        android:layout_below="@+id/count"/>
+
+
 </RelativeLayout>
